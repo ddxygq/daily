@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <db-info>
+        <driver-name>com.mysql.jdbc.Driver</driver-name>
+        <url>jdbc:mysql://0.0.0.0:3306/test?characterEncoding=UTF-8</url>
+        <user-name>keguang</user-name>
+        <password>123456</password>
+    </db-info>
+</config>

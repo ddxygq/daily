@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn">
+
+    <properties>
+        <!-- 日志路径 -->
+        <property name="log_home">D:\logs\test</property>
+    </properties>
+
+    <Appenders>
+        <!-- 输出日志到控制台 -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+        </Console>
+        <RollingFile name="RollingFileInfo" fileName="${log_home}/info.log"
+                     filePattern="${log_home}/info-%d{yyyy-MM-dd}-%i.log.zip"
+                     append="true">
+            <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="[%d{HH:mm:ss:SSS}] [%p] - %l - %m%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="24" modulate="true"/>
+                <SizeBasedTriggeringPolicy size="50 MB"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile name="RollingFileWarn" fileName="${log_home}/warn.log"
+                     filePattern="${log_home}/warn-%d{yyyy-MM-dd}-%i.log.zip"
+
+                     append="true">
+            <ThresholdFilter level="warn" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="[%d{HH:mm:ss:SSS}] [%p] - %l - %m%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="24" modulate="true"/>
+                <SizeBasedTriggeringPolicy size="50 MB"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile name="RollingFileError" fileName="${log_home}/error.log"
+                     filePattern="${log_home}/error-%d{yyyy-MM-dd}-%i.log.zip"
+                     append="true">
+            <ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="[%d{HH:mm:ss:SSS}] [%p] - %l - %m%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="24" modulate="true"/>
+                <SizeBasedTriggeringPolicy size="50 MB"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile name="RollingFileTimeOut" fileName="${log_home}/timeout.log"
+                     filePattern="${log_home}/timeout-%d{yyyy-MM-dd}-%i.log.zip"
+                     append="true">
+            <PatternLayout pattern="[%d{HH:mm:ss:SSS}] [%p] - %l - %m%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="24" modulate="true"/>
+                <SizeBasedTriggeringPolicy size="50 MB"/>
+            </Policies>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <!-- 这里level="info"表示只输出info级别以上的日志 -->
+        <root level="info">
+            <appender-ref ref="Console"/>
+            <appender-ref ref="RollingFileInfo"/>
+            <appender-ref ref="RollingFileWarn"/>
+            <appender-ref ref="RollingFileError"/>
+        </root>
+        <logger name="timeout" level="trace" additivity="false">
+            <appender-ref ref="RollingFileTimeOut"/>
+        </logger>
+    </Loggers>
+</Configuration>

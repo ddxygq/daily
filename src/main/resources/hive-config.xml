@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <db-info>
+        <driver-name>org.apache.hive.jdbc.HiveDriver</driver-name>
+        <url>jdbc:hive2://172.81.208.89:10000/hm2</url>
+        <user-name>hadoop</user-name>
+        <password>Hdue906kk1</password>
+    </db-info>
+</config>
