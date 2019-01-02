@@ -12,5 +12,9 @@ public class Map2JSON {
         HashMap<String, Object> map = new HashMap<>();
         map.put("name", "keguang");
         map.put("age", 23);
+
+
     }
+
+
 }

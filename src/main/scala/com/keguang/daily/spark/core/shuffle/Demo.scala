@@ -10,6 +10,7 @@ import com.keguang.daily.spark.utils.SparkUtils
   */
 object Demo extends App{
   val sc = SparkUtils.getSc(true)
+  // sc.newAPIHadoopRDD()
 
   val tokenized = sc.textFile("data/data.txt").flatMap(_.split(' ')).map(x => (x, 1))
   tokenized.coalesce(4, true)
