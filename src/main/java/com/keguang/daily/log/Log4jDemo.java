@@ -15,7 +15,7 @@ public class Log4jDemo {
     public static void main(String[] args) {
         logger.debug("this is debug message.");
         logger.info("this is inro message.");
-        // logger.error("this is error message.");
+        logger.error("this is error message.");
 
         try{
             Integer.valueOf("哈哈");
