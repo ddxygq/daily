@@ -14,7 +14,7 @@ import java.lang.annotation.Target;
 
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface TestAnnotation {
+public @interface AnnotationDemo {
 
     // 注解的属性默认值需要用default关键字指定
     int id() default -1;
