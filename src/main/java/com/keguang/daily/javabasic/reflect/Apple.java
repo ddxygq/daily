@@ -1,5 +1,7 @@
 package com.keguang.daily.javabasic.reflect;
 
+import scala.App;
+
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -31,7 +33,7 @@ public class Apple {
         System.out.println("apple price : " + apple.getPrice());
 
         // 反射
-        Class clz = Class.forName("com.keguang.daily.javabasic.reflect.Apple");
+        Class<?> clz = Class.forName("com.keguang.daily.javabasic.reflect.Apple");
         Method setMethod = clz.getMethod("setPrice", int.class);
         Constructor constructor = clz.getConstructor();
         Object obj = constructor.newInstance();
