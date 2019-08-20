@@ -30,6 +30,7 @@ public class ScheduleDemo {
                 .withRepeatCount(10))*/
                 .withSchedule(CronScheduleBuilder.cronSchedule("*/5 * * * * ?"))
                 .build();
+
         // 4 把任务和触发器放到scheduler中
         scheduler.scheduleJob(job, trigger);
 
