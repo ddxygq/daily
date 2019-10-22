@@ -11,7 +11,7 @@ import java.util.List;
  * @ version: v1.0.0
  * @ description: lammbda 表达式用法
  */
-public class Demo2 {
+public class LambdaDemo {
     public static void main(String[] args) {
         List<String> list = Arrays.asList("hello","tom","apple","bbc");
 
@@ -29,5 +29,7 @@ public class Demo2 {
         Collections.sort(list, (s1,s2) -> s1.compareTo(s2));
 
         System.out.println(list);
+
+        list.forEach(fruit -> System.out.println(fruit));
     }
 }
