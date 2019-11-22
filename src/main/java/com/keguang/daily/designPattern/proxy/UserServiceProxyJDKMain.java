@@ -7,9 +7,9 @@ import java.lang.reflect.Proxy;
  * @ Author: keguang
  * @ Date: 2019/11/21 17:44
  * @ version: v1.0.0
- * @ description:
+ * @ description: JDK动态代理
  */
-public class UserServiceProxyMain {
+public class UserServiceProxyJDKMain {
     public static void main(String[] args) {
 
         // 1. 创建被代理的对象，即UserService的实现类
