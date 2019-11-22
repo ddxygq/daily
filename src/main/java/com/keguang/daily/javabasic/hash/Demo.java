@@ -12,8 +12,9 @@ public class Demo {
     }
 
     private static void demo(){
-        String s = "a";
-        String s2 = "a";
+        String s = "META-INF";
+        String s2 = "META-INF";
         System.out.println(s == s2);
+        System.out.println(s == "META-INF");
     }
 }

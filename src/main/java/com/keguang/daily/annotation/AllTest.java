@@ -29,7 +29,7 @@ public class AllTest {
     public static void main(String[] args) {
         Field a = null;
         try {
-            a = AllTest.class.getDeclaredField("a");
+            a = AllTest.class.getDeclaredField("META-INF");
             a.setAccessible(true);
 
             // 获取成员变量上的注解

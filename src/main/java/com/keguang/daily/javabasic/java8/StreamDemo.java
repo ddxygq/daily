@@ -14,7 +14,7 @@ import java.util.stream.Stream;
  */
 public class StreamDemo {
     public static void main(String[] args) {
-        Stream<String> stream = Stream.of("a", "b", "c");
+        Stream<String> stream = Stream.of("META-INF", "b", "c");
         // List<String> output = stream.map(String::toUpperCase).collect(Collectors.toList());
         stream.map(String::toUpperCase).collect(Collectors.toList()).forEach(System.out::println);
 
@@ -24,10 +24,10 @@ public class StreamDemo {
 
     private static void streamDefine(){
         // 使用值构建
-        Stream<String> stream = Stream.of("a", "b", "c");
+        Stream<String> stream = Stream.of("META-INF", "b", "c");
 
         // 使用数组构建
-        String[] strArray = new String[]{"a", "b", "c"};
+        String[] strArray = new String[]{"META-INF", "b", "c"};
         Stream<String> stream2 = Stream.of(strArray);
         Stream<String> stream3 = Arrays.stream(strArray);
 
