@@ -13,7 +13,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <log4j.version>2.5</log4j.version>
         <scala.version>2.11.8</scala.version>
-        <spark.version>2.0.2</spark.version>
+        <spark.version>2.4.4</spark.version>
         <flink.version>1.6.2</flink.version>
         <hadoop.version>2.6.5</hadoop.version>
         <lombok.version>1.16.20</lombok.version>
