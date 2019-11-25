@@ -1,4 +1,4 @@
-package com.keguang.daily.flink.asyncio;
+package com.keguang.daily.asyncio;
 
 import com.keguang.daily.utils.MysqlPoolUtils;
 import org.apache.flink.configuration.Configuration;
