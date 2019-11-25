@@ -1,4 +1,4 @@
-package com.keguang.daily.asyncio;
+package com.keguang.daily.configuration.asyncio;
 
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;

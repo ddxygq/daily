@@ -1,4 +1,4 @@
-package com.keguang.daily.asyncio;
+package com.keguang.daily.configuration.asyncio;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;

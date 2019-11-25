@@ -1,4 +1,4 @@
-package com.keguang.daily.asyncio;
+package com.keguang.daily.configuration.asyncio;
 
 /**
  * @ Author: keguang
